@@ -1,0 +1,28 @@
+{
+    "name": "foe-archer-of-fire",
+    "title": "Fallout Equestria D100 by ArcherOfFire",
+    "description": "A system for the post-apocalyptic fantasy setting of fo:e, adapted to Foundry VTT by Altarya DeFlammes.",
+    "version": "0.0.1",
+    "minimumCoreVersion": "9",
+    "compatibleCoreVersion": "9",
+    "templateVersion": 1,
+    "authors": [
+        {
+        "name": "Altarya DeFlammes",
+        "discord": "Altarya Luna#2768"
+        }
+    ],
+    "scripts": [],
+    "esmodules": ["./module/foe.mjs"],
+    "styles": ["./styles/system.css"],
+    "packs": [],
+    "languages": [],
+    "socket": true,
+    "gridDistance": 1.5,
+    "gridUnits": "m",
+    "primaryTokenAttribute": "combat.wounds.torso",
+    "secondaryTokenAttribute": "combat.strain",
+    "url": "",
+    "manifest": "",
+    "download": ""
+}

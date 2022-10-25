@@ -1,0 +1,307 @@
+{
+    "Actor": {
+        "types": ["character", "enemy"],
+        "character":{
+            "orientation": "",
+            "mane": "",
+            "coat": "",
+            "eyes": "",
+            "cm_or_glyph": "",
+            "weight": 1.0,
+            "height": 1.0,
+            "diet": 1.0,
+            "level": 1,
+            "experience": 0,
+            "creation_points": {
+                "max": 35,
+                "val": 28
+            },
+            "karma": {
+                "positive": 0,
+                "negative": 0
+            },
+            "survival": {
+                "rads": 0,
+                "rad_resistance": 0,
+                "taint": 0,
+                "temperature": {
+                    "preffered_min": 0,
+                    "preffered_max": 30,
+                    "body": 30
+                },
+                "needs": {
+                    "d_foods": 0,
+                    "d_water": 0,
+                    "d_sleep": 0
+                },
+                "disease": []
+            },
+            "special": {
+                "strength": {
+                    "val": 1,
+                    "label": "",
+                    "mod": 0,
+                    "mfd": {
+                        "two": 0,
+                        "one_and_half": 0,
+                        "full": 0,
+                        "three_quarter": 0,
+                        "half": 0,
+                        "quarter": 0,
+                        "tenth": 0
+                    }
+                },
+                "perception": {
+                    "val": 1,
+                    "label": "",
+                    "mod": 0,
+                    "mfd": {
+                        "two": 0,
+                        "one_and_half": 0,
+                        "full": 0,
+                        "three_quarter": 0,
+                        "half": 0,
+                        "quarter": 0,
+                        "tenth": 0
+                    }
+                },
+                "endurance": {
+                    "val": 1,
+                    "label": "",
+                    "mod": 0,
+                    "mfd": {
+                        "two": 0,
+                        "one_and_half": 0,
+                        "full": 0,
+                        "three_quarter": 0,
+                        "half": 0,
+                        "quarter": 0,
+                        "tenth": 0
+                    }
+                },
+                "charisma": {
+                    "val": 1,
+                    "label": "",
+                    "mod": 0,
+                    "mfd": {
+                        "two": 0,
+                        "one_and_half": 0,
+                        "full": 0,
+                        "three_quarter": 0,
+                        "half": 0,
+                        "quarter": 0,
+                        "tenth": 0
+                    }
+                },
+                "intelligence": {
+                    "val": 1,
+                    "label": "",
+                    "mod": 0,
+                    "mfd": {
+                        "two": 0,
+                        "one_and_half": 0,
+                        "full": 0,
+                        "three_quarter": 0,
+                        "half": 0,
+                        "quarter": 0,
+                        "tenth": 0
+                    }
+                },
+                "agility": {
+                    "val": 1,
+                    "label": "",
+                    "mod": 0,
+                    "mfd": {
+                        "two": 0,
+                        "one_and_half": 0,
+                        "full": 0,
+                        "three_quarter": 0,
+                        "half": 0,
+                        "quarter": 0,
+                        "tenth": 0
+                    }
+                },
+                "luck": {
+                    "val": 1,
+                    "label": "",
+                    "mod": 0,
+                    "mfd": {
+                        "two": 0,
+                        "one_and_half": 0,
+                        "full": 0,
+                        "three_quarter": 0,
+                        "half": 0,
+                        "quarter": 0,
+                        "tenth": 0
+                    }
+                }
+            },
+            "skills": {
+                "s": {
+                    "dig": 0,
+                    "melee": 0
+                },
+                "p": {
+                    "energy_weapons": 0,
+                    "explosives": 0,
+                    "lockpicking": 0
+                },
+                "e": {
+                    "big_guns": 0,
+                    "survival": 0,
+                    "unarmed": 0
+                },
+                "c": {
+                    "mercantile": 0,
+                    "speechcraft": 0
+                },
+                "i": {
+                    "magic": 0,
+                    "medicine": 0,
+                    "repair": 0,
+                    "science": 0
+                },
+                "a": {
+                    "flight": 0,
+                    "small_guns": 0,
+                    "sneak": 0
+                }
+            },
+            "combat": {
+                "wounds": {
+                    "torso": {
+                        "min": 0,
+                        "value": 0,
+                        "max": 0
+                    },
+                    "head": {
+                        "min": 0,
+                        "value": 0,
+                        "max": 0
+                    },
+                    "rf_leg": {
+                        "min": 0,
+                        "value": 0,
+                        "max": 0
+                    },
+                    "lf_leg": {
+                        "min": 0,
+                        "value": 0,
+                        "max": 0
+                    },
+                    "rb_leg": {
+                        "min": 0,
+                        "value": 0,
+                        "max": 0
+                    },
+                    "lb_leg": {
+                        "min": 0,
+                        "value": 0,
+                        "max": 0
+                    },
+                    "r_wing": {
+                        "min": 0,
+                        "value": 0,
+                        "max": 0
+                    },
+                    "l_wing": {
+                        "min": 0,
+                        "value": 0,
+                        "max": 0
+                    },
+                    "horn": {
+                        "min": 0,
+                        "value": 0,
+                        "max": 0
+                    },
+                    "custom_limb_1": {
+                        "min": 0,
+                        "value": 0,
+                        "max": 0
+                    },
+                    "custom_limb_2": {
+                        "min": 0,
+                        "value": 0,
+                        "max": 0
+                    },
+                    "custom_limb_3": {
+                        "min": 0,
+                        "value": 0,
+                        "max": 0
+                    },
+                    "custom_limb_4": {
+                        "min": 0,
+                        "value": 0,
+                        "max": 0
+                    }
+                },
+                "dam_per_wound": 0,
+                "dam_per_wound_mod": 0,
+                "dt": 0,
+                "dr": 0,
+                "strain": {
+                    "min": 0,
+                    "value": 0,
+                    "max": 0
+                },
+                "sats": {
+                    "min": 0,
+                    "value": 0,
+                    "max": 0
+                },
+                "speeds": {
+                    "ground": 0,
+                    "flight": 0,
+                    "dig": 0,
+                    "climb": 0,
+                    "sneak": 0,
+                    "run": 0
+                },
+                "jump": {
+                    "long": 0,
+                    "running_long": 0,
+                    "high": 0,
+                    "running_high": 0
+                }
+            }
+        }
+    },
+    "Item": {
+        "types": ["item", "weapon", "ammo", "armour"],
+        "templates": {
+            "item_basic": {
+                "name": "",
+                "weight": 0,
+                "value": 0,
+                "description": "",
+                "effects": [],
+                "is_consumable": false
+            }
+        },
+        "item": {
+            "templates": ["item_basic"]
+        },
+        "weapon": {
+            "templates": ["item_basic"],
+            "damage": 0,
+            "damage_type": [],
+            "type": 0,
+            "crit": 1.0,
+            "reload": "",
+            "range_inc": 10,
+            "ammo_type": [],
+            "mag_size": 0,
+            "mag_count": 0
+        },
+        "ammo": {
+            "templates": ["item_basic"],
+            "ammo_type": []
+        },
+        "armour": {
+            "templates": ["item_basic"],
+            "dt": "",
+            "dr": "",
+            "attachments": []
+        }
+    }
+}
