@@ -71,7 +71,7 @@ export class foeActorSheet extends ActorSheet {
 		// Handle ability scores.
 		let total = 0;
 		for (let [k, v] of Object.entries(context.system.special)) {
-			v.label = game.i18n.localize(CONFIG.SPECIAL[k]) ?? k;
+			//v.label = game.i18n.localize(CONFIG.SPECIAL[k]) ?? k;
 
 			calculateMFD(this.actor, v, k);
 			total -= v.val;

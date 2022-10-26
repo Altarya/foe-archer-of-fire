@@ -55,8 +55,8 @@ export class foeActor extends Actor {
 		const systemData = actorData.data.data;
 
 		// Loop through ability scores, and add their modifiers to our sheet output.
-		let total = 0;
-		for (let [key, ability] of Object.entries(actorData.data.data.special)) {
+		/*let total = 0;
+		for (let [key, ability] of Object.entries(systemData.special)) {
 			//calculateMFD(this,ability, key);
 			total -= ability.val;
 		}
@@ -64,7 +64,7 @@ export class foeActor extends Actor {
 		let check = parseInt(this.data.data.creation_points.max);
 		total += check;
 
-		//this.update({'data.creation_points.val': total});
+		//this.update({'data.creation_points.val': total});*/
 	}
 
 	/**

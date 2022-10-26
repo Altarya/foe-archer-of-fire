@@ -27,15 +27,18 @@
 	<!--- Sheet Body -->
 	<section class="sheet-body">
 		<div class="tab features" data-group="primary" data-tab="features">
-			
 			<div class="special grid grid-7col"">
 				{{#each system.special as |special key|}}
-				<div class="special-content grid grid-9col">
-					<div>
-						<a for="system.special.{{key}}" class="special-label">{{key}}</a>
-						<input type="text" class="special_input" name="system.special.{{key}}.label" value="{{special.val}}" data-dtype="Number"/>
-						<input type="button" class="special_button" name="system.special.{{key}}.label" value="+"/>
-						<input type="button" class="special_button" name="system.special.{{key}}.label" value="-"/>
+				<div class="special-content grid grid-10col">
+					<div class="grid grid-2col">
+						<div>
+							<a for="system.special.{{key}}" class="special-label">{{special.label}}</a>
+							<input type="text" class="special_input" name="system.special.{{key}}.label" value="{{special.val}}" data-dtype="Number"/>
+						</div>
+						<div class="plusminus">
+							<input type="button" class="special_button" name="system.special.{{key}}.label" value="+"/>
+							<input type="button" class="special_button" name="system.special.{{key}}.label" value="-"/>
+						</div>
 					</div>
 					<div>
 						<a class="special-label">Mod.</a>

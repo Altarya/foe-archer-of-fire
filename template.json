@@ -39,7 +39,7 @@
             "special": {
                 "strength": {
                     "val": 1,
-                    "label": "",
+                    "label": "ST",
                     "mod": 0,
                     "mfd": {
                         "two": 0,
@@ -53,7 +53,7 @@
                 },
                 "perception": {
                     "val": 1,
-                    "label": "",
+                    "label": "PE",
                     "mod": 0,
                     "mfd": {
                         "two": 0,
@@ -67,7 +67,7 @@
                 },
                 "endurance": {
                     "val": 1,
-                    "label": "",
+                    "label": "EN",
                     "mod": 0,
                     "mfd": {
                         "two": 0,
@@ -81,7 +81,7 @@
                 },
                 "charisma": {
                     "val": 1,
-                    "label": "",
+                    "label": "CH",
                     "mod": 0,
                     "mfd": {
                         "two": 0,
@@ -95,7 +95,7 @@
                 },
                 "intelligence": {
                     "val": 1,
-                    "label": "",
+                    "label": "IN",
                     "mod": 0,
                     "mfd": {
                         "two": 0,
@@ -109,7 +109,7 @@
                 },
                 "agility": {
                     "val": 1,
-                    "label": "",
+                    "label": "AG",
                     "mod": 0,
                     "mfd": {
                         "two": 0,
@@ -123,7 +123,7 @@
                 },
                 "luck": {
                     "val": 1,
-                    "label": "",
+                    "label": "LK",
                     "mod": 0,
                     "mfd": {
                         "two": 0,
