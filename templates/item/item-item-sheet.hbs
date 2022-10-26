@@ -1,0 +1,36 @@
+<form class="{{cssClass}}" autocomplete="off">
+	<header class="sheet-header">
+		<img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+		<div class="header-fields">
+			<h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+			<div class="grid grid-3col">
+				<div class="item">
+					<label class="item-label">Quantity</label>
+					<input type="text" class="item_property" name="quantity" value="{{system.quantity}}" data-dtype="Number"/>
+				</div>
+				<div class="item">
+					<label class="item-label">Value</label>
+					<input type="text" class="item_property" name="value" value="{{system.value}}" data-dtype="Number"/>
+				</div>
+				<div class="item">
+					<label class="item-label">Weight</label>
+					<input type="text" class="item_property" name="weight" value="{{system.weight}}" data-dtype="Number"/>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	{{!-- Sheet Tab Navigation --}}
+	<nav class="sheet-tabs tabs" data-group="primary">
+		<a class="item" data-tab="description">Description</a>
+	</nav>
+
+	{{!-- Sheet Body --}}
+	<section class="sheet-body">
+
+		{{!-- Description Tab --}}
+		<div class="tab" data-group="primary" data-tab="description">
+			{{editor target="data.description" button=true editable=true content=system.description}}
+		</div>
+	</section>
+</form>

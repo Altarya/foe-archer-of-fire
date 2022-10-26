@@ -117,3 +117,78 @@ export function setSPECIAL(statName, specials, statChange, actor) {
             break;
     }
 }
+
+export function setSkillRank(skillname, skills, actor, statChange) {
+    switch (skillname) {
+        case "dig":
+            actor.update({'data.skills.dig': statChange});
+            skills.dig = statChange;
+            break;
+        case "melee":
+            actor.update({'data.skills.melee': statChange});
+            skills.melee = statChange;
+            break;
+        case "energy_weapons":
+            actor.update({'data.skills.energy_weapons': statChange});
+            skills.energy_weapons = statChange;
+            break;
+        case "explosives":
+            actor.update({'data.skills.explosives': statChange});
+            skills.explosives = statChange;
+            break;
+        case "lockpicking":
+            actor.update({'data.skills.lockpicking': statChange});
+            skills.lockpicking = statChange;
+            break;
+        case "big_guns":
+            actor.update({'data.skills.big_guns': statChange});
+            skills.big_guns = statChange;
+            break;
+        case "survival":
+            actor.update({'data.skills.survival': statChange});
+            skills.survival = statChange;
+            break;
+        case "unarmed":
+            actor.update({'data.skills.unarmed': statChange});
+            skills.unarmed = statChange;
+            break;
+        case "mercantile":
+            actor.update({'data.skills.mercantile': statChange});
+            skills.mercantile = statChange;
+            break;
+        case "speechcraft":
+            actor.update({'data.skills.speechcraft': statChange});
+            skills.speechcraft = statChange;
+            break;
+        case "magic":
+            actor.update({'data.skills.magic': statChange});
+            skills.magic = statChange;
+            break;
+        case "medicine":
+            actor.update({'data.skills.medicine': statChange});
+            skills.medicine = statChange;
+            break;
+        case "repair":
+            actor.update({'data.skills.repair': statChange});
+            skills.repair = statChange;
+            break;
+        case "science":
+            actor.update({'data.skills.science': statChange});
+            skills.science = statChange;
+            break;
+        case "flight":
+            actor.update({'data.skills.flight': statChange});
+            skills.flight = statChange;
+            break;
+        case "small_guns":
+            actor.update({'data.skills.small_guns': statChange});
+            skills.small_guns = statChange;
+            break;
+        case "sneak":
+            actor.update({'data.skills.sneak': statChange});
+            skills.sneak = statChange;
+            break;
+        default:
+            break;
+    }
+}

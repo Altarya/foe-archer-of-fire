@@ -137,35 +137,23 @@
                 }
             },
             "skills": {
-                "s": {
-                    "dig": 0,
-                    "melee": 0
-                },
-                "p": {
-                    "energy_weapons": 0,
-                    "explosives": 0,
-                    "lockpicking": 0
-                },
-                "e": {
-                    "big_guns": 0,
-                    "survival": 0,
-                    "unarmed": 0
-                },
-                "c": {
-                    "mercantile": 0,
-                    "speechcraft": 0
-                },
-                "i": {
-                    "magic": 0,
-                    "medicine": 0,
-                    "repair": 0,
-                    "science": 0
-                },
-                "a": {
-                    "flight": 0,
-                    "small_guns": 0,
-                    "sneak": 0
-                }
+                "dig": 0,
+                "melee": 0,
+                "energy_weapons": 0,
+                "explosives": 0,
+                "lockpicking": 0,
+                "big_guns": 0,
+                "survival": 0,
+                "unarmed": 0,
+                "mercantile": 0,
+                "speechcraft": 0,
+                "magic": 0,
+                "medicine": 0,
+                "repair": 0,
+                "science": 0,
+                "flight": 0,
+                "small_guns": 0,
+                "sneak": 0
             },
             "combat": {
                 "wounds": {
@@ -270,9 +258,9 @@
         "types": ["item", "weapon", "ammo", "armour"],
         "templates": {
             "item_basic": {
-                "name": "",
                 "weight": 0,
                 "value": 0,
+                "quantity": 0,
                 "description": "",
                 "effects": [],
                 "is_consumable": false

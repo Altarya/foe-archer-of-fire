@@ -445,3 +445,15 @@
 	position: relative;
 	transform: translate(20%, 80%);
 }
+
+.skills {
+	font-size: 12px;
+}
+.skills .grid {
+	gap: 0px;
+	margin: -4px;
+}
+
+.skill-label {
+	font-weight: bold;
+}

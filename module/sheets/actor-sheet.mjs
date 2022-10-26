@@ -1,5 +1,5 @@
 import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/effects.mjs";
-import { calculateMFD, setSPECIAL } from "../helpers/utils.mjs";
+import { calculateMFD, setSkillRank, setSPECIAL } from "../helpers/utils.mjs";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -155,6 +155,8 @@ export class foeActorSheet extends ActorSheet {
 
 		html.find('.special_input').change(this._onEdit.bind(this));
 
+		html.find('.skill_input').change(this._onEditSkill.bind(this));
+
 		html.find('.special_button').click(this._onSpecialClick.bind(this));
 
 		// Add Inventory Item
@@ -270,7 +272,8 @@ export class foeActorSheet extends ActorSheet {
 			change = 1;
 			let check = parseInt(this.actor.data.data.creation_points.val);
 			if ((check-1) < 0) {
-				return;
+				//return;
+				//Disabled until trait/hindrance support is added
 			}
 		}
 		let val = 0;
@@ -314,12 +317,27 @@ export class foeActorSheet extends ActorSheet {
 		let specials = this.actor.data.data.special;
 		let check = parseInt(this.actor.data.data.creation_points.val);
 		if ((check-parseInt(data)) < 0) {
-			return;
+			//return;
 		}
 
 		let statName = header.name.match("^system.special.(.*).label$")[1];
 
 		setSPECIAL(statName, specials, statChange, this.actor);
+	}
+
+	_onEditSkill(event) {
+		event.preventDefault();
+		const header = event.currentTarget;
+		// Get the type of item to create.
+		const type = header.dataset.type;
+		// Grab any data associated with this control.
+		const data = duplicate(header.value);
+		const statChange = parseInt(data);
+		let skills = this.actor.data.data.skills;
+
+		let statName = header.name.match("^system.skill.(.*)$")[1];
+
+		setSkillRank(statName, skills, this.actor, statChange);
 	}
 
 	/**
@@ -370,7 +388,7 @@ export class foeActorSheet extends ActorSheet {
 
 		// Handle rolls that supply the formula directly.
 		if (dataset.roll) {
-			let label = dataset.label ? `[ability] ${dataset.label}` : '';
+			let label = dataset.label ? `${dataset.label}` : '';
 			let roll = new Roll(dataset.roll, this.actor.getRollData());
 			roll.toMessage({
 				speaker: ChatMessage.getSpeaker({ actor: this.actor }),

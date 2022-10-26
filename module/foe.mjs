@@ -44,6 +44,51 @@ Hooks.once('init', async function() {
 	Items.unregisterSheet("core", ItemSheet);
 	Items.registerSheet("foe", foeItemSheet, { makeDefault: true });
 
+	//Register Handlebar helpers
+	Handlebars.registerHelper("multiplyNumberFOE", function(thing1, thing2) {
+		return Math.floor(thing1 * thing2);
+	});
+	Handlebars.registerHelper("getSkillLabel", function(skillname) {
+		switch (skillname) {
+			case "dig":
+				return "Dig";
+			case "melee":
+				return "Melee";
+			case "energy_weapons":
+				return "Energy Weapons";
+			case "explosives":
+				return "Explosives";
+			case "lockpicking":
+				return "Lockpicking";
+			case "big_guns":
+				return "Big Guns";
+			case "survival":
+				return "Survival";
+			case "unarmed":
+				return "Unarmed";
+			case "mercantile":
+				return "Mercantile";
+			case "speechcraft":
+				return "Speechcraft";
+			case "magic":
+				return "Magic";
+			case "medicine":
+				return "Medicine";
+			case "repair":
+				return "Repair";
+			case "science":
+				return "Science";
+			case "flight":
+				return "Flight";
+			case "small_guns":
+				return "Small Guns";
+			case "sneak":
+				return "Sneak";
+			default:
+				return "Not Found";
+		}
+	});
+
 	// Preload Handlebars templates.
 	return preloadHandlebarsTemplates();
 });

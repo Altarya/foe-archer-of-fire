@@ -4,12 +4,12 @@
 		<img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
 		<div class="header-fields">
 			<h1 class="charname flexrow flex-center flex-between"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
-			<div class="grid grid-4col">
+			{{!-- <div class="grid grid-4col">
 				<a for="system.creation_points.max" class="special-label">Creation Points</a>
 				<input type="text" class="cp_input" name="Creation Points" value="{{system.creation_points.max}}" data-dtype="Number"/>
 				<span> / </span>
 				<p class="special-label">{{numberFormat system.creation_points.val decimals=0 sign=false}}</p>
-			</div>
+			</div> --}}
 		</div>
 	</header>
 
@@ -22,6 +22,7 @@
 		<a class="item" data-tab="items">Items</a>
 		<a class="item" data-tab="spells">Spells</a>
 		<a class="item" data-tab="effects">Perks</a>
+		<a class="item" data-tab="traitandhind">Traits and Hindrances</a>
 	</nav>
 
 	<!--- Sheet Body -->
@@ -45,32 +46,71 @@
 						<input type="text" class="special_mod" name="system.special.{{key}}.label" value="{{special.mod}}" data-dtype="Number"/>
 					</div>
 					<div>
-						<span class="ability-mod rollable" data-roll="d100cs<(@special.{{key}}.mfd.two)" data-label="2">2</span>
-						<p class="special-label">{{numberFormat special.mfd.two decimals=0 sign=false}}</p>
+						<span class="special-label rollable" data-roll="d100cs<(@special.{{key}}.mfd.two)" data-label="2 {{special.label}}">2</span>
+						<p>{{numberFormat special.mfd.two decimals=0 sign=false}}</p>
 					</div>
 					<div>
-						<span class="ability-mod rollable" data-roll="d100cs<(@special.{{key}}.mfd.one_and_half)" data-label="1½">1½</span>
-						<p class="special-label">{{numberFormat special.mfd.one_and_half decimals=0 sign=false}}</p>
+						<span class="special-label rollable" data-roll="d100cs<(@special.{{key}}.mfd.one_and_half)" data-label="1½ {{special.label}}">1½</span>
+						<p>{{numberFormat special.mfd.one_and_half decimals=0 sign=false}}</p>
 					</div>
 					<div>
-						<span class="ability-mod rollable" data-roll="d100cs<(@special.{{key}}.mfd.full)" data-label="Full">Full</span>
-						<p class="special-label">{{numberFormat special.mfd.full decimals=0 sign=false}}</p>
+						<span class="special-label rollable" data-roll="d100cs<(@special.{{key}}.mfd.full)" data-label="Full {{special.label}}">Full</span>
+						<p>{{numberFormat special.mfd.full decimals=0 sign=false}}</p>
 					</div>
 					<div>
-						<span class="ability-mod rollable" data-roll="d100cs<(@special.{{key}}.mfd.half)" data-label="½">½</span>
-						<p class="special-label">{{numberFormat special.mfd.half decimals=0 sign=false}}</p>
+						<span class="special-label rollable" data-roll="d100cs<(@special.{{key}}.mfd.half)" data-label="½ {{special.label}}">½</span>
+						<p>{{numberFormat special.mfd.half decimals=0 sign=false}}</p>
 					</div>
 					<div>
-						<span class="ability-mod rollable" data-roll="d100cs<(@special.{{key}}.mfd.three_quarter)" data-label="¾">¾</span>
-						<p class="special-label">{{numberFormat special.mfd.three_quarter decimals=0 sign=false}}</p>
+						<span class="special-label rollable" data-roll="d100cs<(@special.{{key}}.mfd.three_quarter)" data-label="¾ {{special.label}}">¾</span>
+						<p>{{numberFormat special.mfd.three_quarter decimals=0 sign=false}}</p>
 					</div>
 					<div>
-						<span class="ability-mod rollable" data-roll="d100cs<(@special.{{key}}.mfd.quarter)" data-label="¼">¼</span>
-						<p class="special-label">{{numberFormat special.mfd.quarter decimals=0 sign=false}}</p>
+						<span class="special-label rollable" data-roll="d100cs<(@special.{{key}}.mfd.quarter)" data-label="¼ {{special.label}}">¼</span>
+						<p>{{numberFormat special.mfd.quarter decimals=0 sign=false}}</p>
 					</div>
 					<div>
-						<span class="ability-mod rollable" data-roll="d100cs<(@special.{{key}}.mfd.tenth)" data-label="1/10">1/10</span>
-						<p class="special-label">{{numberFormat special.mfd.tenth decimals=0 sign=false}}</p>
+						<span class="special-label rollable" data-roll="d100cs<(@special.{{key}}.mfd.tenth)" data-label="1/10 {{special.label}}">1/10</span>
+						<p>{{numberFormat special.mfd.tenth decimals=0 sign=false}}</p>
+					</div>
+				</div>
+				{{/each}}
+			</div>
+		</div>
+		<div class="tab skill" data-group="primary" data-tab="skill">
+			<div class="skills grid grid-7col"">
+				{{#each system.skills as |skill key|}}
+				<div class="skill-content grid grid-8col">
+					<div>
+						<a for="system.skills.{{key}}" class="skill-label">{{getSkillLabel key}}</a>
+					</div>
+					<div>
+						<span class="skill-label rollable" data-roll="d100cs<(@skills.{{key}}*2)" data-label="2 {{getSkillLabel key}}">2</span>
+						<p>{{multiplyNumberFOE skill 2}}</p>
+					</div>
+					<div>
+						<span class="skill-label rollable" data-roll="d100cs<(@skills.{{key}}*1.5)" data-label="1½ {{getSkillLabel key}}">1½</span>
+						<p>{{multiplyNumberFOE skill 1.5}}</p>
+					</div>
+					<div>
+						<span class="skill-label rollable" data-roll="d100cs<(@skills.{{key}})" data-label="Full {{getSkillLabel key}}">Full</span>
+						<input type="text" class="skill_input" name="system.skill" value="{{skill}}" data-dtype="Number"/>
+					</div>
+					<div>
+						<span class="skill-label rollable" data-roll="d100cs<(@skills.{{key}}*0.5)" data-label="½ {{getSkillLabel key}}">½</span>
+						<p>{{multiplyNumberFOE skill 0.5}}</p>
+					</div>
+					<div>
+						<span class="skill-label rollable" data-roll="d100cs<(@skills.{{key}}*0.75)" data-label="¾ {{getSkillLabel key}}">¾</span>
+						<p>{{multiplyNumberFOE skill 0.75}}</p>
+					</div>
+					<div>
+						<span class="skill-label rollable" data-roll="d100cs<(@skills.{{key}}*0.25)" data-label="¼ {{getSkillLabel key}}">¼</span>
+						<p>{{multiplyNumberFOE skill 0.25}}</p>
+					</div>
+					<div>
+						<span class="skill-label rollable" data-roll="d100cs<(@skills.{{key}}*0.1)" data-label="1/10 {{getSkillLabel key}}">1/10</span>
+						<p>{{multiplyNumberFOE skill 0.1}}</p>
 					</div>
 				</div>
 				{{/each}}
