@@ -58,12 +58,12 @@
 						<p>{{numberFormat special.mfd.full decimals=0 sign=false}}</p>
 					</div>
 					<div>
-						<span class="special-label rollable" data-roll="d100cs<(@special.{{key}}.mfd.half)" data-label="½ {{special.label}}">½</span>
-						<p>{{numberFormat special.mfd.half decimals=0 sign=false}}</p>
-					</div>
-					<div>
 						<span class="special-label rollable" data-roll="d100cs<(@special.{{key}}.mfd.three_quarter)" data-label="¾ {{special.label}}">¾</span>
 						<p>{{numberFormat special.mfd.three_quarter decimals=0 sign=false}}</p>
+					</div>
+					<div>
+						<span class="special-label rollable" data-roll="d100cs<(@special.{{key}}.mfd.half)" data-label="½ {{special.label}}">½</span>
+						<p>{{numberFormat special.mfd.half decimals=0 sign=false}}</p>
 					</div>
 					<div>
 						<span class="special-label rollable" data-roll="d100cs<(@special.{{key}}.mfd.quarter)" data-label="¼ {{special.label}}">¼</span>
@@ -97,12 +97,12 @@
 						<input type="text" class="skill_input" name="system.skill.{{key}}" value="{{skill}}" data-dtype="Number"/>
 					</div>
 					<div>
-						<span class="skill-label rollable" data-roll="d100cs<(@skills.{{key}}*0.5)" data-label="½ {{getSkillLabel key}}">½</span>
-						<p>{{multiplyNumberFOE skill 0.5}}</p>
-					</div>
-					<div>
 						<span class="skill-label rollable" data-roll="d100cs<(@skills.{{key}}*0.75)" data-label="¾ {{getSkillLabel key}}">¾</span>
 						<p>{{multiplyNumberFOE skill 0.75}}</p>
+					</div>
+					<div>
+						<span class="skill-label rollable" data-roll="d100cs<(@skills.{{key}}*0.5)" data-label="½ {{getSkillLabel key}}">½</span>
+						<p>{{multiplyNumberFOE skill 0.5}}</p>
 					</div>
 					<div>
 						<span class="skill-label rollable" data-roll="d100cs<(@skills.{{key}}*0.25)" data-label="¼ {{getSkillLabel key}}">¼</span>
